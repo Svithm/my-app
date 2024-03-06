@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-function App() {
+const Header = () => {
+  return (
+    <div>
+      <h1>Верхня частина сайта</h1>
+    </div>
+  );
+}
+
+const App = () => {
+  return (
+  <div>
+    <div className="App"><Header /></div>
+    <div className="App"><Body /></div>
+    <div className="App"><Footer /></div> 
+  </div> 
+  );
+}
+
+const Body = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h2>Тіло сайта</h2>
+        <ul>
+          <li>html</li>
+          <li>css</li>
+          <li>js</li>
+          <li>react</li>
+        </ul>
+      </div>
+  );
+}
+
+const Footer = () => {
+  return (
+    <div>
+      <h1>Нижня частина сайта</h1>
     </div>
   );
 }
